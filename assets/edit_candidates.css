@@ -1,0 +1,139 @@
+
+
+
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 110px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Title */
+h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+/* Search Input */
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styled Table */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.styled-table th {
+    background: #1e3a8a;
+    color: white;
+    font-weight: bold;
+
+}
+
+.styled-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.styled-table img {
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e3a8a;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+/* Candidate Name with Style */
+.view-details {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+    color: #1e3a8a;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #dc2626;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+.highlight {
+    background-color: yellow !important;
+    transition: background-color 0.5s ease-in-out;
+}

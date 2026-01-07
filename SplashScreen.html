@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Information System</title>
+    <link rel="stylesheet" href="MainHome.css">
+</head>
+<body>
+    <h1>CampusVote: Candidate Information System</h1>
+    <div class="candidates-list">
+        <div class="candidate" onclick="showProfile(1)">
+            <img src="candidate1.jpg" alt="Candidate 1">
+            <h3>John Doe</h3>
+        </div>
+        <div class="candidate" onclick="showProfile(2)"> 
+                                                                                                       
+            <h3>Jane Smith</h3>
+        </div>
+    </div>
+
+    <div id="profile-section" class="hidden">
+        <button onclick="closeProfile()">Close</button>
+        <h2 id="candidate-name"></h2>
+        <p id="candidate-details"></p>
+        <h3>Comments & Reactions</h3>
+        <div id="comments-section"></div>
+        <textarea id="comment-input" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment()">Post Comment</button>
+    </div>
+
+    <script src="MainHome.js"></script>
+</body>
+</html>

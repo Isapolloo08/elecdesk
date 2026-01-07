@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;  
+    padding: 30px 0;
+  }
+
+  /* 🔵 Fixed Header */
+header {
+  background: linear-gradient(135deg, #03045E, #007bff);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-logo {
+  width: 70px; /* Adjust size */
+  height: 70px;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover; /* Prevents distortion */
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth effect */
+}
+
+/* Glow effect on hover */
+.header-logo:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* White glow */
+  transform: scale(1.1); /* Slightly enlarge */
+  cursor: pointer; /* Show clickable cursor */
+}
+
+/* Make sure the logo is inside an <a> tag for it to be clickable */
+.logo a {
+  display: inline-block; /* Ensures proper clickable area */
+  text-decoration: none; /* Remove default link styling */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+  align-items: center; /* Ensures vertical alignment */
+  flex-grow: 1; /* Allows the links to take up available space */
+  justify-content:flex-end; /* Centers the links */
+  margin-right: 100px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment of text and icons */
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Button */
+.logout-btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 8px 12px; /* Match padding with other links */
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-left: auto; /* Pushes the logout button to the right */
+}
+
+.logout-btn i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}
+
+
+/* 🔔 Notification Styling */
+.notification-icon {
+  position: relative;
+  padding: 8px 5px;
+  cursor: pointer;
+}
+
+#notif-bell {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+#notif-bell:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* 📌 Notification Counter */
+#notif-count {
+  background: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 4px 8px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  display: none;
+}
+
+/* Style the notification dropdown */
+.notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 300px;
+  max-height: 400px; /* Set a fixed height */
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+  border-radius: 5px;
+}
+
+/* Show the dropdown when it has the "show" class */
+.notification-dropdown.show {
+  display: block;
+}
+
+/* Scrollable notification list */
+#notif-list {
+  max-height: 250px; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 10px;
+}
+
+.notif-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
+}
+
+/* Remove border for last item */
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+/* Delete button (fixed at the bottom) */
+.delete-notif-btn {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
+  position: sticky;
+  bottom: 0;
+}
+
+.delete-notif-btn:hover {
+  background: darkred;
+}
+.notif-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Title (fixed at the top) */
+.notification-dropdown h4 {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+.notif-item small {
+  color: #666;
+  font-size: 12px;
+  text-align: right; /* Align timestamps to the right */
+}
+  
+  .profile-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #e0f7ff;
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+  }
+  
+  .profile-details h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .role-badge {
+    background-color: #007bff;
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  
+  .created-at {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  /* Cards */
+  .profile-card {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  /* Fields */
+  .profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-field label {
+    font-weight: 600;
+    color: #444;
+    flex: 1;
+  }
+  
+  .profile-field span,
+  .profile-field input,
+  .profile-field textarea {
+    flex: 2;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .profile-field input,
+  .profile-field textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+    width: 100%;
+  }
+  
+  .profile-field button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .profile-field button:hover {
+    background-color: #0056b3;
+  }
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-actions button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.form-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  width: 50%;
+}
+
+.profile-upload {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-upload input {
+  display: block;
+  margin: 10px auto;
+}

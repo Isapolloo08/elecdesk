@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #004e9e;
+    --accent-color: #ff9900;
+    --light-bg: #f5f7fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}
+
+/* Copy all the CSS from the style tag in the HTML file */
+/* ... */

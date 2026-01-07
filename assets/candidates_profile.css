@@ -1,0 +1,350 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0033cc, #0099ff);
+    color: white;
+}
+
+
+/* 🔵 Fixed Header */
+header {
+    background: linear-gradient(135deg, #03045E, #007bff);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-logo {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area */
+}
+
+.logo .header-logo a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust the gap as needed */
+    align-items: center; /* Ensures vertical alignment */
+    flex-grow: 1; /* Allows the links to take up available space */
+    justify-content:flex-end; /* Centers the links */
+    margin-right: 100px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment of text and icons */
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Button */
+.logout-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 12px; /* Match padding with other links */
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: auto; /* Pushes the logout button to the right */
+}
+
+.logout-btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+}
+
+
+/* 🔔 Notification Styling */
+.notification-icon {
+    position: relative;
+    padding: 8px 5px;
+    cursor: pointer;
+}
+
+#notif-bell {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+#notif-bell:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* 📌 Notification Counter */
+#notif-count {
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 4px 8px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: none;
+}
+
+/* Style the notification dropdown */
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    max-height: 400px; /* Set a fixed height */
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none;
+    border-radius: 5px;
+}
+
+/* Show the dropdown when it has the "show" class */
+.notification-dropdown.show {
+    display: block;
+}
+
+/* Scrollable notification list */
+#notif-list {
+    max-height: 250px; /* Set a fixed height */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 10px;
+}
+
+/* Notification items */
+.notif-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Remove border for last item */
+.notif-item:last-child {
+    border-bottom: none;
+}
+
+/* Delete button (fixed at the bottom) */
+.delete-notif-btn {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    position: sticky;
+    bottom: 0;
+}
+  
+.delete-notif-btn:hover {
+    background: darkred;
+}
+.notif-item a {
+    color: #000000;
+}
+
+/* Title (fixed at the top) */
+.notification-dropdown h4 {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.notif-item small {
+    color: gray;
+    font-size: 12px;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensures items align at the top */
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+/* 📌 Candidate Profile Box (Left Side) */
+.profile-container {
+    width: 30%;
+    background: linear-gradient(to right, #0044cc, #0077ff);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: start;
+    color: white;
+    flex-shrink: 0; /* Prevents it from resizing */ 
+}
+
+.profile-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #f0f0f0;
+    margin: 5px 0;
+}
+
+/* 💬 Comment Section (Center) */
+.comments-section {
+    width: 65%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    flex-shrink: 1;
+}
+
+/* 📝 Comment Styling */
+.comment {
+    background: #f0f8ff;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* 🔄 Fade-in Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 💡 Highlight Effect for New Comments */
+@keyframes highlightNew {
+    0% { background-color: #fffbcc; } /* Light yellow */
+    100% { background-color: white; }
+}
+
+.comment.new {
+    animation: highlightNew 2s ease-in-out;
+}
+
+/* 📌 Reply Styling with Slide-in Effect */
+.reply {
+    margin-left: 30px;
+    background: #cce5ff;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+/* 🔄 Slide-in Keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 📝 Input & Button Styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #0044cc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔥 Input Focus Effect */
+textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+    transform: scale(1.02);
+}
+
+button {
+    margin-top: 5px;
+    background: #0044cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #002288;
+}
+
+.highlight {
+    background-color: yellow;
+    border: 2px solid #ffeb3b;
+}
+
+
+
+@media (max-width: 768px) {
+    .profile-container {
+        max-height: 300px; /* Adjust height */
+        overflow-y: auto; /* Enables scrolling */
+    }
+
+    .comments-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}

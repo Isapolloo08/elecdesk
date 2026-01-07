@@ -1,0 +1,479 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f6ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove extra margins */
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0057b8;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Candidate List */
+.candidates-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.candidate {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 87, 184, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 200px;
+}
+
+.candidate:hover {
+    transform: scale(1.05);
+}
+
+.candidate img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.candidate h3 {
+    margin-top: 10px;
+    color: #0057b8;
+}
+
+/* Candidate Profile */
+h2 {
+    text-align: center;
+    color: #0057b8;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Comments Section */
+#comments-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 87, 184, 0.2);
+}
+
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0057b8;
+    border-radius: 5px;
+    resize: none;
+}
+
+button {
+    background: #0057b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #004699;
+}
+
+/* Login & Register Forms */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 87, 184, 0.2);
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0057b8;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+}
+
+/* Analytics Table */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 2px 10px rgba(0, 87, 184, 0.2);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #0057b8;
+    color: white;
+}
+
+td {
+    background: white;
+}
+
+/* Admin Panel */
+.admin-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 87, 184, 0.2);
+}
+
+.admin-container h2 {
+    text-align: center;
+    color: #0057b8;
+}
+/* Centered Form Container */
+/* Form styling */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 87, 184, 0.3); /* More noticeable shadow */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect for a subtle floating animation */
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* Form Inputs */
+.form-container input {
+    width: 90%;
+    padding: 12px; /* Pinalaki ang padding para mas mataas */
+    margin: 30px 0; /* Bawasan ang margin para di masyadong malayo */
+    border: 2px solid #0057b8;
+    
+    border-radius: 5px;
+    font-size: 16px; /* Mas readable ang text */
+    display: block; /* Para hindi mag-overlap */
+}
+/* Form Button */
+.form-container button {
+    width: 100%;
+    background: #0057b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #004699;
+
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.profile-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.home-content {
+    text-align: center;
+    padding: 50px;
+}
+  .wave-group {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .wave-group .input {
+            font-size: 16px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #515151;
+            background: transparent;
+        }
+        
+        .wave-group .input:focus {
+            outline: none;
+        }
+        
+        .wave-group .label {
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            display: flex;
+        }
+        
+        .wave-group .label-char {
+            transition: 0.2s ease all;
+            transition-delay: calc(var(--index) * .05s);
+        }
+        
+        .wave-group .input:focus ~ label .label-char,
+        .wave-group .input:valid ~ label .label-char {
+            transform: translateY(-20px);
+            font-size: 14px;
+            color: #5264AE;
+        }
+        
+        .wave-group .bar {
+            position:absolute;
+            display: block;
+            width: 100%;
+        }
+        
+        .wave-group .bar:before, .wave-group .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 10px;
+            position: absolute;
+            background: #5264AE;
+            transition: 0.2s ease all;
+        }
+        
+        .wave-group .bar:before {
+            left: 50%;
+        }
+        
+        .wave-group .bar:after {
+            right: 50%;
+        }
+        
+        .wave-group .input:focus ~ .bar:before,
+        .wave-group .input:focus ~ .bar:after {
+            width: 50%;
+        }
+
+        /* Password toggle */
+        .password-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            color: #5264AE;
+        }
+  
+        .profile-upload {
+            text-align: start;
+      
+            margin-bottom: 10px;
+        }
+        
+        .profile-upload input {
+            display: block;
+       
+        }
+/* Page Container to center everything */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* Logo and Title */
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    width: 120px; /* Bigger for better visibility */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Title styling */
+.form-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0057b8;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(0, 87, 184, 0.3);
+}
+
+/* Form Styling */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 87, 184, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: translateY(-3px);
+}
+/* ✅ Profile Picture Styling */
+.profile-section {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 10px;
+}
+
+.profile-section input[type="file"] {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 📩 Form Inputs */
+.container input,
+.container select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 🔥 Button */
+.btn:hover {
+    transform: scale(1.05);
+}
